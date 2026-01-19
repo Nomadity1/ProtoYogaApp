@@ -1,10 +1,2 @@
 ﻿# ProtoYogaApp
-ProtoYogaApp/
-├── html_css_js/
-│   ├── index.html
-│   ├── app.js
-│   ├── style.css
-│   └── [andra HTML-filer]
-├── images/
-│   └── [alla bilder]
-└── positions.json
+Simple app to practice how to set up an API 

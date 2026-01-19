@@ -1,0 +1,121 @@
+*** Vecka_3_Lab *** 
+-----------------------------------
+
+*** MITT API *** PUNKT 1 NEDAN *** 
+-----------------------------------
+PS C:\Users\linda> dotnet new webapi -n v3_LAB
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Restoring C:\Users\linda\v3_LAB\v3_LAB.csproj:
+Restore succeeded.
+
+PS C:\Users\linda> cd v3_LAB
+
+
+-----------------------------------
+*** TIPS FRÅN CO-PILOT ***
+-----------------------------------
+Här är ett steg-för-steg-exempel på hur man kan skapa en enkel Yoga API med C#, Entity Framework, async-metoder, samt grundläggande HTML och CSS i VS Code.
+1. Skapa projekt i VS Code
+Installera .NET SDK: https://dotnet.microsoft.com/download/dotnet
+Skapa nytt Web API-projekt:
+dotnet new webapi -n YogaApiLab
+cd YogaApiLab
+Installera Entity Framework och SQL Server-paket:
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+2. Skapa modell (Entity)
+// Models/YogaClass.cs
+public class YogaClass
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Level { get; set; } // t.ex. Beginner, Intermediate
+    public DateTime Schedule { get; set; }
+}
+3. Skapa DbContext
+// Data/YogaContext.cs
+using Microsoft.EntityFrameworkCore;
+
+public class YogaContext : DbContext
+{
+    public YogaContext(DbContextOptions<YogaContext> options) : base(options) { }
+
+    public DbSet<YogaClass> YogaClasses { get; set; }
+}
+4. Konfigurera connection string i appsettings.json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=YogaDb;Trusted_Connection=True;"
+}
+5. Skapa Controller med Async-metoder
+// Controllers/YogaController.cs
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+[ApiController]
+[Route("api/[controller]")]
+public class YogaController : ControllerBase
+{
+    private readonly YogaContext _context;
+
+    public YogaController(YogaContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet]
+    public async Task<IEnumerable<YogaClass>> GetYogaClasses()
+    {
+        return await _context.YogaClasses.ToListAsync();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddYogaClass(YogaClass yogaClass)
+    {
+        _context.YogaClasses.Add(yogaClass);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetYogaClasses), new { id = yogaClass.Id }, yogaClass);
+    }
+}
+6. Enkel HTML & CSS för frontend
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yoga Classes</title>
+    <style>
+        body { font-family: Arial; margin: 2rem; }
+        .yoga-class { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Yoga Classes</h1>
+    <div id="classes"></div>
+
+    <script>
+        async function loadClasses() {
+            const response = await fetch('https://localhost:5001/api/yoga');
+            const classes = await response.json();
+            const container = document.getElementById('classes');
+            classes.forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'yoga-class';
+                div.textContent = `${c.name} - ${c.level} - ${new Date(c.schedule).toLocaleString()}`;
+                container.appendChild(div);
+            });
+        }
+        loadClasses();
+    </script>
+</body>
+</html>
+7. Starta projektet
+dotnet run
+API är tillgängligt på https://localhost:5001/api/yoga
+Öppna HTML-filen i webbläsaren för att se data.
+Sammanfattning
+Back-end: .NET Web API med async och Entity Framework
+Database: LocalDB eller valfri SQL Server
+Front-end: Enkel HTML + CSS + fetch API för asynkron dataladdning
+VS Code: Kan användas både för kod och front-end
+Detta är en komplett labb-mockup som kan byggas ut med autentisering, fler endpoints och mer avancerad CSS/UI.

@@ -1,0 +1,183 @@
+* {
+    margin: 10;
+    padding: 5;
+    box-sizing: border-box;
+}
+/* GLOBALA STILAR */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Century Gothic, sans-serif;
+    background-color: #64dadc;
+    color: #000;
+    line-height: 1.6;
+    text-align: center;
+}
+main {
+    flex: 1; /* makes the main content area take up remaining vertical space */
+}
+h1, h2, h3 {
+    font-weight: normal;
+    margin: auto;
+}
+.h2 {
+    padding: 15px;
+}
+.card {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #c2f4f6;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 90%;
+    padding-bottom: 10px;
+}
+.start-container {
+    text-align: center;
+    width: 100%;
+}
+button {
+    background-color: #64dadc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+} 
+button:hover {
+    background-color: #45b8ba;
+    color: #fff;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    flex: 1;
+    justify-content: center;
+    gap: 5px;
+}
+#signoutBtn, #myProfileBtn, #shareBtn {
+    background-color: #000;
+    color: #c2f4f6;
+    border-radius: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}   
+#signoutBtn:hover, #myProfileBtn:hover, #shareBtn:hover {
+    background-color: #45b8ba;
+    color: #fff;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+    .menu a {
+        flex: 1;
+        background-color: #000000;
+        color: #c2f4f6;
+        text-decoration: none;
+        text-align: center;
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .menu a:hover {
+            background-color: #c1f1ea;
+            color: #000000;
+        }
+footer {
+    bottom: 0;  
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+/* STILAR FÖR FORMULÄR */
+.registration, .login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #c2f4f6;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#login-form, #register-form, #comment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.submit-button {
+    align-self: center; 
+    margin-top: 20px;
+}
+.form-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.login-form-label,
+.reg-form-label,
+.comment-form-label {
+    font-size: 14px;
+    width: 100px;
+    margin-right: 10px;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* STILAR FÖR PASS MED BILDER OCH BESKRIVNINGAR */
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #c2f4f6;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    padding: 5px;
+    width: 60%;
+}
+img {
+    margin: 0 auto 0px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.description-container {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+/* RESPONSIV DESIGN FÖR SKÄRM STÖRRE ÄN 768 PX */
+/* @media (min-width: 768px) {
+    .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+/* RESPONSIV DESIGN FÖR SKÄRM STÖRRE ÄN 1024 PX */
+/* @media (min-width: 1024px) {
+    .card  {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } */ 
+/* } */

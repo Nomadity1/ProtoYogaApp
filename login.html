@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype YA-app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Lovely to see you back for improved health!</h2>
+    </header>
+    <main>
+        <section class="card login">
+            <form id="login-form">
+                <div class="form-title">
+                    <label class="login-form-label" for="name">E mail:</label>
+                    <input type="email" id="name" name="name" required>
+                </div>  
+                <div class="form-title">
+                    <label class="login-form-label" for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+        </section>
+    </main>
+    <!--  No navigation -->
+    <!-- Direct redirection to start page -->
+    <footer>
+        <p>&copy; 2026 Linda-Maria Modig</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

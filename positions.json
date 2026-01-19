@@ -1,0 +1,81 @@
+{
+"positions": [
+    {
+      "title": "Seated Position",
+      "description": "A seated yoga position to improve posture and flexibility.",
+      "image": "seated.jpg",
+      "theme": ["relaxation", "innerFocus"],
+      "focusArea": ["frontside", "backside", "hips"]
+    },
+    {
+      "title": "Downward Dog",
+      "description": "A classic yoga pose that stretches the entire body and builds strength.",
+      "image": "downwarddog.jpg",
+      "theme": ["flexibility", "strength"],
+      "focusArea": ["lowerBody", "upperBody", "wholeBody"]
+    },
+    {
+      "title": "Chaturanga Dandasana",
+      "description": "A foundational yoga pose that builds arm and core strength.",
+      "image": "chaturanga.jpg",
+      "theme": ["strength"],
+      "focusArea": ["upperBody"]
+    },
+    {   
+      "title": "Cobra Pose",
+      "description": "A foundational yoga pose that stretches the entire body and builds strength.",
+      "image": "cobrapose.jpg",
+      "theme": ["relaxation", "flexibility", "strength"],
+      "focusArea": ["frontside", "backside"]
+    },
+    {
+      "title": "Warrior1",
+      "description": "A balancing pose that strengthens the legs and improves focus.",
+      "image": "warrior1.jpg",
+      "theme": ["balance", "strength"],
+      "focusArea": ["lowerBody", "upperBody"]
+    },
+    {
+      "title": "Warrior 3",
+      "description": "A balancing pose that strengthens the legs and core while improving focus.",
+      "image": "warrior3.jpg",
+      "theme": ["strength"],
+      "focusArea": ["upperBody", "lowerBody"]
+    },
+    {
+      "title": "Pyramid Pose",
+      "description": "A balancing pose that strengthens the legs and improves focus.",
+      "image": "pyramidpose.jpg",      
+      "theme": ["balance", "strength"],
+      "focusArea": ["lowerBody", "upperBody"]
+    },
+    {
+      "title": "Tree Pose",
+      "description": "A balancing pose that strengthens the legs and improves focus.",
+      "image": "treepose.jpg",      
+      "theme": ["balance", "innerFocus", "strength"],
+      "focusArea": ["lowerBody", "upperBody"]
+    },
+    {
+      "title": "Seated twist",
+      "description": "A balancing pose that strengthens the legs and improves focus.",
+      "image": "seatedtwist.jpg",      
+      "theme": ["flexibility"],
+      "focusArea": ["upperBody"]
+    },
+    {
+      "title": "Squat Position",
+      "description": "A grounding pose that opens the hips and strengthens the lower body.",
+      "image": "squat.jpg",      
+      "theme": ["flexibility"],
+      "focusArea": ["lowerBody", "backside", "hips"]
+    },
+    {
+      "title": "Shavasana", 
+      "description": "A foundational yoga pose that stretches the entire body and builds strength.",
+      "image": "shavasana.jpg",      
+      "theme": ["relaxation"],
+      "focusArea": ["wholeBody"] 
+    }
+  ] 
+}

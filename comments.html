@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype YA-app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="sharing">Shared experiences</h1>
+    </header>
+    <main>
+        <section class="card">
+            <form id="comment-form">
+                <div class="form-title">
+                    <label class="comment-form-label" for="comment">Comment:</label>
+                    <input type="text" id="comment" name="comment" required>
+                </div>  
+                <div class="form-title">
+                    <label class="comment-form-label" for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-title">
+                    <label class="comment-form-label" for="email">E mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Säkerställa att endast registrerade användare kan skicka kommentarer -->
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+        <button type="button" id="signoutBtn">Sign out</button>
+    </main>
+    <nav class="menu">
+        <a href="index.html">Start</a>
+        <a href="todaysyoga.html">Today's Yoga</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <footer>
+        <p>&copy; 2026 Linda-Maria Modig</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

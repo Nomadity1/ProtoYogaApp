@@ -1,6 +1,19 @@
 *** Vecka_3_Lab *** 
 -----------------------------------
+MAPPSTRUKTUR: 
+ProtoYogaApp/
+├── html_css_js/
+│   ├── index.html
+│   ├── app.js
+│   ├── style.css
+│   └── [andra HTML-filer]
+├── images/
+│   └── [alla bilder]
+└── positions.json
 
+
+ATT REDIGERA: 
+-----------------------------------
 *** MITT API *** PUNKT 1 NEDAN *** 
 -----------------------------------
 PS C:\Users\linda> dotnet new webapi -n v3_LAB
